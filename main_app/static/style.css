@@ -1,0 +1,30 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{ 
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+.fa-sticky-note{
+    color: #FFC107;
+    padding: 0px 15px ;
+}
+h3{
+    font-family: 'Cookie', cursive;
+}
+
+p{
+    font-family: sans-serif;
+    font-size: small;
+}
+
+
+.form-control-plaintext:focus{
+    outline: none !important;
+}
+

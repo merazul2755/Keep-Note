@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login_style.css'%}">
+
+    
+</head>
+<body>
+
+    <div class="login">
+        {% if error %}
+        {{ error }}
+
+        {% endif %}
+        <h1>Sign Up</h1>
+        <form method="post" action="{% url 'signup' %}">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username" required="required" />
+            <input type="password" name="password1" placeholder="Password" required="required" />
+            <input type="password" name="password2" placeholder="Confirm Password" required="required" />
+            <button type="submit" class="btn btn-primary btn-block btn-large">Sign Up</button>
+            <p>Have An Account? 
+                <a href="{% url 'login' %}">Login Here</a>
+            </p>
+        </form>
+    </div>
+    
+   
+</body>
+</html>
